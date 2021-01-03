@@ -26,12 +26,12 @@ let newUser = user;
 - `user.name == newUser.name;` // true as they both point to same object and value
 - `user.sibling == newUser.sibling;`  // true as they both point to same object and value
 - `user.sibling === newUser.sibling;`  // true as they both point to same object and value
-- `user.sibling == allBrothers;` // false
-- `user.sibling === allBrothers;` // false
-- `brothersCopy === allBrothers;` // false
-- `brothersCopy == allBrothers;` // false
-- `brothersCopy == user.sibling;` // true
-- `brothersCopy === user.sibling;` // true
+- `user.sibling == allBrothers;` // false as objects are in different memory locations
+- `user.sibling === allBrothers;` // false as objects are in different memory locations
+- `brothersCopy === allBrothers;` // false as objects are in different memory locations
+- `brothersCopy == allBrothers;` // false as objects are in different memory locations
+- `brothersCopy == user.sibling;` // true as objects are in same memory locations
+- `brothersCopy === user.sibling;` // true as objects are in same memory locations
 - `brothersCopy[0] === user.sibling[0];` // true as both the arrays are equal
 - `brothersCopy[1] === user.sibling[1];` // true as both the arrays are equal
 - `user.sibling[1] === newUser.sibling[1];` // true as they both point to same object and value

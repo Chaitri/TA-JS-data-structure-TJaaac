@@ -16,20 +16,22 @@ let newUser = user;
 
 <!-- To add this image here use ![name](./hello.jpg) -->
 
+![Memory Representation](./MemoryRepresentation.png)
+
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true as they contain the same memory location
+- `user === newUser;` // true as they contain the same memory location
+- `user.name === newUser.name;` // true as they both point to same object and value
+- `user.name == newUser.name;` // true as they both point to same object and value
+- `user.sibling == newUser.sibling;`  // true as they both point to same object and value
+- `user.sibling === newUser.sibling;`  // true as they both point to same object and value
+- `user.sibling == allBrothers;` // false
+- `user.sibling === allBrothers;` // false
+- `brothersCopy === allBrothers;` // false
+- `brothersCopy == allBrothers;` // false
+- `brothersCopy == user.sibling;` // true
+- `brothersCopy === user.sibling;` // true
+- `brothersCopy[0] === user.sibling[0];` // true as both the arrays are equal
+- `brothersCopy[1] === user.sibling[1];` // true as both the arrays are equal
+- `user.sibling[1] === newUser.sibling[1];` // true as they both point to same object and value
